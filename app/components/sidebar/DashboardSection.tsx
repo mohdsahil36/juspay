@@ -32,7 +32,11 @@ export function DashboardSection({ links }: DashboardSectionProps) {
             pathname === "/" && "border-l-2 border-black bg-zinc-100"
           )}
         >
-          <Image className="w-5 h-5" src={links[0]?.icon} alt="icon" />
+          <Image
+            className="w-5 h-5"
+            src={links[0]?.icon ?? "/placeholder.png"}
+            alt="icon"
+          />
           {links[0]?.label}
         </Button>
         <div className="w-full">
