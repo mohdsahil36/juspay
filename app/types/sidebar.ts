@@ -1,7 +1,9 @@
+import type { StaticImageData } from "next/image";
+
 export interface SidebarLink {
   label: string;
   href: string;
-  icon: string; // SVG import type
+  icon: StaticImageData; // ✅ SVG/Image import type
 }
 
 export interface SidebarSubmenuItem {
@@ -12,7 +14,7 @@ export interface SidebarSubmenuItem {
 export interface SidebarPageItem {
   label: string;
   href?: string;
-  icon?: string; // SVG import type
+  icon?: StaticImageData; // ✅ optional icon
   submenu?: SidebarSubmenuItem[];
 }
 
