@@ -5,7 +5,7 @@ type SidebarIcon = StaticImageData | string;
 export interface SidebarLink {
   label: string;
   href: string;
-  icon: SidebarIcon; // ✅ SVG/Image import type
+  icon?: SidebarIcon; // ✅ SVG/Image import type
 }
 
 export interface SidebarSubmenuItem {
