@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import Sidebar from "./components/Sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
+const InterFont = Inter({
+  variable: "--inter",
+  subsets: ["latin"],
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,11 +29,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${InterFont.variable} ${geistSans.variable} ${geistMono.variable} antialiased h-full`}
       >
-        {children}
+        <SidebarProvider>
+          <div className="flex h-screen">
+            <Sidebar />
+            <div className="flex-1 flex flex-col">
+              <header className="h-16 border-b flex items-center">
+                <SidebarTrigger />
+              </header>
+              <main className="flex-1 overflow-auto">{children}</main>
+            </div>
+          </div>
+        </SidebarProvider>
       </body>
     </html>
   );
