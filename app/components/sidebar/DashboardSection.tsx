@@ -49,7 +49,11 @@ export function DashboardSection({ links }: DashboardSectionProps) {
               >
                 <AccordionTrigger className="flex items-center gap-2 h-[28px] text-sm font-normal text-black group hover:bg-zinc-50 after:hidden cursor-pointer w-full">
                   <ChevronRight className="w-4 h-4 shrink-0 transition-transform duration-200 mr-1 group-data-[state=open]:rotate-90" />
-                  <Image className="w-5 h-5 mr-2" src={icon} alt="icon" />
+                  <Image
+                    className="w-5 h-5 mr-2"
+                    src={icon ?? "/placeholder.png"}
+                    alt="icon"
+                  />
                   {label}
                 </AccordionTrigger>
                 <AccordionContent className="pb-2 pt-1 overflow-hidden">
