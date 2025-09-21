@@ -1,7 +1,7 @@
 export interface SidebarLink {
   label: string;
   href: string;
-  icon: any; // SVG import type
+  icon: string; // SVG import type
 }
 
 export interface SidebarSubmenuItem {
@@ -12,7 +12,7 @@ export interface SidebarSubmenuItem {
 export interface SidebarPageItem {
   label: string;
   href?: string;
-  icon?: any; // SVG import type
+  icon?: string; // SVG import type
   submenu?: SidebarSubmenuItem[];
 }
 

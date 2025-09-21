@@ -2,7 +2,6 @@ import ChartPieSlice from "@/public/assets/ChartPieSlice.svg";
 import ShoppingBagOpen from "@/public/assets/ShoppingBagOpen.svg";
 import FolderNotch from "@/public/assets/FolderNotch.svg";
 import BookOpen from "@/public/assets/BookOpen.svg";
-import IdentificationBadge from "@/public/assets/IdentificationBadge.svg";
 import ChatsTeardrop from "@/public/assets/ChatsTeardrop.svg";
 import Notebook from "@/public/assets/Notebook.svg";
 import IdentificationCard from "@/public/assets/IdentificationCard.svg";
